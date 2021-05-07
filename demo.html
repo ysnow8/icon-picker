@@ -10,38 +10,37 @@
     <script src="module/common.js"></script>
 </head>
 <body>
-    <div class="layui-form">
-        <div class="layui-form-item">
-            <label for="" class="layui-form-label">选择图标</label>
-            <div class="layui-input-block">
-                <input type="text" id="iconPicker" lay-filter="iconPicker" class="layui-input">
-            </div>
+<div class="layui-form">
+    <div class="layui-form-item">
+        <label for="" class="layui-form-label">选择图标</label>
+        <div class="layui-input-block">
+            <input type="text" id="iconPicker" lay-filter="iconPicker" class="layui-input">
         </div>
     </div>
-    <script>
-        layui.use(['iconPicker', 'form'], function () {
-            var iconPicker = layui.iconPicker,
-                form = layui.form;
-            
-            iconPicker.render({
-                // 选择器，推荐使用input
-                elem: '#iconPicker',
-                // 数据类型：fontClass/unicode，推荐使用fontClass
-                type: 'fontClass',
-                // 是否开启搜索：true/false
-                search: true,
-                // 是否开启分页
-                page: true,
-                // 每页显示数量，默认12
-                limit: 12,
-                // 点击回调
-                click: function (data) {
-                    console.log(data);
-                }
-            });
+</div>
+<script>
+  layui.use(['iconPicker'], function () {
+    var iconPicker = layui.iconPicker,
+      form = layui.form;
+    iconPicker.render({
+      // 选择器，推荐使用input
+      elem: '#iconPicker',
+      // 数据类型：fontClass/unicode，推荐使用fontClass
+      type: 'fontClass',
+      // 是否开启搜索：true/false
+      search: true,
+      // 是否开启分页
+      page: true,
+      // 每页显示数量，默认12
+      limit: 12,
+      // 点击回调
+      click: function (data) {
+        console.log(data);
+      }
+    });
 
 
-        });
-    </script>
+  });
+</script>
 </body>
 </html>

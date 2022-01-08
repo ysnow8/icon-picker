@@ -10,7 +10,7 @@ layui.define(['laypage', 'form'], function (exports) {
         laypage = layui.laypage,
         form = layui.form,
         BODY = 'body',
-        TIPS = '请选择图标';
+        TIPS = '请选择图标样式';
 
     /**
      * 渲染组件
